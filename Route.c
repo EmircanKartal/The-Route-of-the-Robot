@@ -9,6 +9,7 @@ int main()
     // Get initial position from user
     printf("Enter starting row and column (0-5, 0-4): ");
     scanf("%d %d", &row, &col);
+    printf("\n-----------------------------------------\n");
 
     // Set the initial position of the robot to 1
     board[row][col] = 1;
@@ -50,12 +51,18 @@ int main()
                 board[row][col] = 1;
             }
             break;
+        case 0: // exit
+        break;
+
         default:
-            printf("Invalid entry!");
+        printf("Invalid entry!");
             break;
         }
 
     } while (input != 0);
+
+    printf("-----------------------------------------\n\nRoute of the Robot:\n");
+
 
     // Print the current board state
     for (int i = 0; i < 6; i++)
